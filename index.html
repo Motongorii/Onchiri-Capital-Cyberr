@@ -5,84 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="imagess/WhatsApp Image 2026-01-12 at 2.44.15 AM.jpeg">
-<style>
-:root{ --brand-1:#ff512f; --brand-2:#dd2476; --accent:#6c63ff; --bg:#fbfdff; --muted:#6b7280; --text:#111827; --footer-height:140px; }
-html, body { height:100%; margin:0; }
-body{background-color:var(--bg); display:flex; flex-direction:column; min-height:100vh; font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); -webkit-font-smoothing:antialiased;}
-/* Desktop bottom padding to avoid overlapping fixed footer */
-@media (min-width:721px){ body{ padding-bottom:var(--footer-height); } }
-.container{max-width:1100px; margin:0 auto; padding:0 18px;}
-.content { flex: 1; padding: 28px 0; box-sizing: border-box; }
-
-/* Header & nav */
-.site-header{padding:12px 0; border-bottom:1px solid rgba(15,23,42,0.04); background:linear-gradient(90deg, rgba(255,81,47,0.03), rgba(221,36,118,0.01));}
-.site-header .topbar{display:flex; align-items:center; justify-content:space-between; gap:16px}
-.logo{display:flex; align-items:center; gap:14px}
-.logo img{width:64px; height:64px; object-fit:cover; border-radius:8px; box-shadow: 0 6px 18px rgba(17,24,39,0.06)}
-.site-nav a{margin-left:18px; color:var(--text); text-decoration:none; font-weight:600}
-.site-nav a:hover{color:var(--accent)}
-
-/* Announcement */
-.announcement{background:linear-gradient(90deg,var(--brand-1),var(--brand-2)); color:#fff; padding:8px 0; text-align:center; font-weight:700}
-
-/* Hero */
-.hero{display:flex; gap:22px; align-items:center; padding:36px 0}
-.hero .hero-copy{flex:1}
-.hero h1{margin:0; font-family:'Merriweather', serif; font-size:3.2rem; background:linear-gradient(90deg,var(--brand-1),var(--brand-2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
-.hero p{color:var(--muted); font-size:1.05rem; margin-top:12px; max-width:640px}
-.cta, .btn{display:inline-block; margin-top:18px; background:var(--brand-1); color:#fff; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; box-shadow:0 8px 22px rgba(31,41,55,0.08); transition:transform .18s ease, box-shadow .18s ease}
-.cta:hover, .btn:hover{transform:translateY(-3px); box-shadow:0 12px 28px rgba(31,41,55,0.12)}
-.hero-image img{width:100%; max-width:420px; height:auto; object-fit:cover; border-radius:12px; box-shadow: 0 10px 30px rgba(17,24,39,0.06)}
-
-/* Services grid */
-.services{display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:22px; margin:36px 0}
-.service-box{background: #fff; padding:14px; border-radius:12px; box-shadow: 0 8px 30px rgba(17,24,39,0.06); transition:transform .28s ease, box-shadow .28s ease}
-.service-box:hover{transform: translateY(-8px); box-shadow:0 16px 45px rgba(17,24,39,0.09)}
-.service-box img{width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:14px}
-.service-box h3{margin:6px 0; font-size:1.05rem}
-.service-box p{color:var(--muted); font-size:0.95rem}
-
-/* Contact Form */
-.contact-container{background:#fff; padding:20px; border-radius:12px; box-shadow: 0 10px 30px rgba(17,24,39,0.04)}
-.contact-form{display:grid; gap:12px}
-.contact-form label{font-size:0.85rem; color:var(--muted); display:block; margin-bottom:6px}
-.contact-form input, .contact-form textarea{width:100%; padding:12px 14px; border-radius:10px; border:1px solid #eaeef6; font-size:1rem; background:#fff}
-.contact-form input:focus, .contact-form textarea:focus{outline:none; box-shadow:0 0 0 4px rgba(108,99,255,0.06); border-color:var(--accent)}
-.contact-form button{background:var(--accent); color:#fff; border:none; padding:12px 16px; border-radius:10px; font-weight:700}
-
-/* Footer */
-.site-footer{background:linear-gradient(180deg,#0f1724 0%, #111827 100%); color:#e6eef8; padding:36px 0; border-top:1px solid rgba(255,255,255,0.03); box-shadow: 0 -6px 30px rgba(2,6,23,0.6)}
-.site-footer.fixed{position:fixed; left:0; right:0; bottom:0; z-index:1000}
-.site-footer .footer-grid{display:flex; gap:28px; max-width:1100px; margin:0 auto; padding:0 18px; align-items:flex-start; justify-content:space-between}
-.footer-col{min-width:160px}
-.footer-col h4{margin-top:0; color:#f8fafc}
-.footer-links{list-style:none; padding:0; margin:0}
-.footer-links li{margin:8px 0}
-.footer-links a{color:#cfe3ff; text-decoration:none}
-.footer-links a:hover{color:#ffffff}
-.social-links{display:flex; gap:10px; margin-top:10px}
-.social-links a{display:inline-flex; width:36px; height:36px; align-items:center; justify-content:center; border-radius:8px; background:rgba(255,255,255,0.03); color:#fff; transition:transform .15s ease}
-.social-links a:hover{transform:translateY(-4px); background:linear-gradient(90deg,var(--brand-1),var(--brand-2))}
-.site-footer .copyright{margin-top:18px; text-align:center; color:#94a3b8; font-size:0.95rem}
-
-/* Responsive tweaks */
-@media (max-width:920px){
-  .site-footer .footer-grid{flex-direction:column; align-items:flex-start; gap:18px}
-  .footer-col{width:100%}
-}
-@media (max-width:720px){
-  body{padding-bottom:0}
-  .site-header .topbar{flex-direction:column; align-items:flex-start; gap:8px}
-  .logo img{width:56px; height:56px}
-  .hero{flex-direction:column; align-items:flex-start}
-  .hero h1{font-size:1.9rem}
-  .hero-image{width:100%}
-  .service-box img{height:120px}
-  .site-footer.fixed{position:static}
-  .site-footer{padding:24px 0}
-}
-</style> 
+<link rel="stylesheet" href="styles.css"> 
 
 </head>
 <body>
@@ -131,28 +54,28 @@ body{background-color:var(--bg); display:flex; flex-direction:column; min-height
                 <h3>Internet Browsing</h3>
                 <p>High-speed internet access for browsing, research, and work.</p>
                 <p class="service-rate">From Ksh 20 • 30min</p>
-                <a class="btn" href="services/internet.html">Learn more</a>
+                <a class="btn" href="/services/internet.html">Learn more</a>
             </div>
  <div class="service-box">
                 <img src="imagess/WhatsApp Image 2026-01-12 at 2.44.47 AM (1).jpeg" alt="Printing Service">
                 <h3>Typing & Printing</h3>
                 <p>Professional document typing, printing, and formatting.</p>
                 <p class="service-rate">B/W Ksh 10/page • Color Ksh 30/page</p>
-                <a class="btn" href="services/printing.html">Learn more</a>
+                <a class="btn" href="/services/printing.html">Learn more</a>
             </div>
 <div class="service-box">
                 <img src="imagess/WhatsApp Image 2026-01-12 at 2.44.47 AM (2).jpeg" alt="Online Services">
                 <h3>Online Services</h3>
                 <p>Assistance with emails, online forms, and applications.</p>
                 <p class="service-rate">From Ksh 50 (per task)</p>
-                <a class="btn" href="services/photocopying.html">Learn more</a>
+                <a class="btn" href="/services/photocopying.html">Learn more</a>
             </div> 
 <div class="service-box">
                 <img src="imagess/WhatsApp Image 2026-01-12 at 2.44.47 AM (3).jpeg" alt="passport picture">
                 <h3>Passport Photo</h3>
                 <p>Small picture for form attachments and ID documents.</p>
                 <p class="service-rate">Ksh 150 (2 copies + digital)</p>
-                <a class="btn" href="services/passport.html">Learn more</a>
+                <a class="btn" href="/services/passport.html">Learn more</a>
             </div>
 
 
@@ -167,26 +90,53 @@ body{background-color:var(--bg); display:flex; flex-direction:column; min-height
   <div class="container">
     <div class="contact-container">
       <h2>FOR INQUIRIES</h2>
-      <form class="contact-form" novalidate>
-        <div>
-          <label for="name">Your Name</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" required>
+      <form id="inquiry-form" class="contact-form" novalidate>
+        <div class="contact-row">
+          <div>
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" placeholder="Your Name" required>
+          </div>
+          <div>
+            <label for="email">Your Email</label>
+            <input id="email" name="email" type="email" placeholder="Your Email" required>
+          </div>
         </div>
         <div>
-          <label for="email">Your Email</label>
-          <input id="email" name="email" type="email" placeholder="Your Email" required>
+          <label for="service">Service</label>
+          <select id="service" name="service">
+            <option>Internet Browsing</option>
+            <option>Typing & Printing</option>
+            <option>Photocopying & Scanning</option>
+            <option>Passport Photos</option>
+          </select>
         </div>
         <div>
           <label for="message">Your Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
-        <div>
-          <button type="submit">Send Message</button>
+        <div style="display:flex; gap:12px; align-items:center">
+          <button type="submit" class="btn">Send Message</button>
+          <div class="form-success" id="form-success" role="status" aria-live="polite">Thanks! Your message was sent.</div>
         </div>
       </form>
     </div>
   </div>
-</section> 
+</section>
+<script>
+var inquiryForm = document.getElementById('inquiry-form');
+if (inquiryForm) {
+  inquiryForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var success = document.getElementById('form-success');
+    if (!success) return;
+    success.style.display = 'block';
+    success.style.opacity = 0; success.style.transition = 'opacity 220ms';
+    requestAnimationFrame(function(){ success.style.opacity = 1; });
+    this.reset();
+    setTimeout(function(){ success.style.opacity = 0; setTimeout(function(){ success.style.display = 'none'; }, 250); }, 4500);
+  });
+}
+</script>
 
     <h2>Contact Us</h2>
     <p>
@@ -198,22 +148,20 @@ body{background-color:var(--bg); display:flex; flex-direction:column; min-height
 </div>
 <footer class="site-footer fixed">
   <div class="footer-grid container">
-    <div class="footer-col">
-      <img src="imagess/WhatsApp Image 2026-01-12 at 2.44.15 AM.jpeg" alt="ONCHIRI logo" style="width:48px; height:48px; border-radius:8px;">
-      <p style="margin-top:8px; color:#cbd5e1; max-width:280px; font-size:0.95rem;">ONCHIRI CAPITAL CYBER — trusted local cyber services for browsing, typing & printing, scans, and passport photos.</p>
+    <div class="footer-col" style="display:flex; align-items:center; gap:12px">
+      <img src="imagess/WhatsApp Image 2026-01-12 at 2.44.15 AM.jpeg" alt="ONCHIRI logo" style="width:40px; height:40px; border-radius:6px;">
+      <div style="font-size:0.95rem; color:#cbd5e1">ONCHIRI CAPITAL CYBER</div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
-      <ul class="footer-links">
-        <li><a href="services/internet.html">Internet Browsing — from Ksh 20</a></li>
-        <li><a href="services/printing.html">Typing & Printing — from Ksh 10/page</a></li>
-        <li><a href="services/photocopying.html">Photocopying & Scanning — from Ksh 5/page</a></li>
-        <li><a href="services/passport.html">Passport Photos — Ksh 150</a></li>
+      <ul class="footer-links" style="margin:0; padding:0; list-style:none;">
+        <li><a href="/services/internet.html">Internet — Ksh 20</a></li>
+        <li><a href="/services/printing.html">Printing — Ksh 10</a></li>
+        <li><a href="/services/photocopying.html">Photocopying — Ksh 5</a></li>
+        <li><a href="/services/passport.html">Passport — Ksh 150</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p style="color:#cbd5e1; margin:0">📍 Main Street, Town<br>📞 0794657567<br>📧 onchiricapitacyber@email.com</p>
+    <div class="footer-col" style="text-align:right">
+      <div style="color:#cbd5e1; font-size:0.92rem">📞 0794657567</div>
     </div>
   </div>
   <div class="copyright">&copy; 2026 ONCHIRI CAPITAL CYBER</div>
